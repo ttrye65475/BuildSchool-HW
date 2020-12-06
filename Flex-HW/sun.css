@@ -241,7 +241,7 @@ font-weight: bold;
 
 .row-item2 span,.row-item3 span,.row-item7 span,.row-item8 span{
   position: absolute;
-  right: 20px;
+  right: 25px;
   top:10;
 }
 
@@ -253,7 +253,7 @@ font-weight: bold;
   line-height: 10px;
   font-size: 0.5px;
   right: 43px;
-  left: 22px;
+  left: 25px;
   bottom:480px;
 }
 
@@ -419,7 +419,7 @@ position: relative;
 }
 
 .foot-icons{
-  padding: 150px 10px 10px 520px;
+  padding: 150px 10px 10px 630px;
   display: flex;
 }
 
