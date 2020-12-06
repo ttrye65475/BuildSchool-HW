@@ -1,0 +1,455 @@
+body{
+font-family: 'Noto Sans TC', sans-serif;
+margin: 0px;
+}
+
+/* 第一塊 */
+.navbar{
+  width: 100%;
+  display: flex;
+  padding: 20px 0px;
+  background-image: url('./background.png');
+  position: fixed;
+  z-index:1;
+}
+
+.navbar-left{
+  width: 33.3%;
+  padding: 20px;
+}
+
+.navbar-link{
+  padding: 10px;
+}
+
+.navbar-left a{
+  color: black;
+  text-decoration: none;
+}
+
+.navbar-left a:hover{
+  color: green;
+}
+
+.navbar-link{
+position: relative;
+}
+
+.navbar-left span{
+  width: 45px;
+  height: 15px;
+  box-sizing: border-box;
+  background-color: #48c8fd;
+  color: #fff;
+  font-size: 3px;
+  position: absolute;
+  padding-left: 11px;
+  padding-bottom: 15px;
+  top: -10px;
+  left: 50px;
+}
+
+.navbar-left span::after{
+  border-color:  #48c8fd transparent  transparent;
+  border-style: solid solid;
+  border-width: 6px 3px 3px 1px; 
+  bottom: -8px;
+  content: "";
+  height: 0px;
+  position: absolute;
+  width: 0px;
+  left: 8px;
+}
+
+.Feature span{
+  left: 10px;
+}
+
+.Element span{
+  left: 45px;
+}
+
+.navbar-middle{
+  width: 33.3%;
+  margin: auto;
+  text-align: center;
+}
+
+.navbar-middle img{
+  width: 150px;
+}
+
+.navbar-right{
+  width: 33.3%;
+  margin: auto;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.navbar-right a{
+  color: #000;
+  padding: 10px;
+  font-size: 24px;
+}
+
+/* 第二塊 */
+.welcome{
+  width: 100%;
+  height: 800px;
+  display: flex;
+  background-image: url('./background.png');
+}
+
+.welcome-left{
+  width: 50%;
+  text-align: left;
+  padding: 200px;
+  font-size: 40px;
+}
+
+.welcome-left a{
+background-color: #000000;
+color: #fff;
+font-size: 5px;
+padding: 10px 30px;
+text-decoration: none;
+}
+
+.welcome-left a:hover{
+  background-color: rgb(133, 201, 221);
+}
+
+.welcome-left-price{
+color: #000;
+font-size: 5px;
+font-size: 20px;
+}
+
+.welcome-right{
+  padding: 100px;
+  width:60%
+}
+
+
+/* 第三塊 */
+.benefits{
+  width: 100%;
+  margin: auto;
+}
+
+.benefits-paragraph1{
+  color: green;
+  text-align: center;
+  font-size: 30px;
+}
+
+.benefits-paragraph2{
+  text-align: center;
+  font-size: 10px;
+  color: rgb(165, 162, 162);
+}
+
+ /* 第四塊 */
+.slogan{
+  margin: auto;
+  margin: 60px;
+  display: flex;
+}
+
+.slogan-left-large{
+  text-align: right;
+}
+
+.slogan-left-small{
+  color: rgb(165, 162, 162);
+  text-align: right;
+}
+
+.slogan-left-small,.slogan-right-small{
+  margin-bottom: 50px;
+}
+
+.slogan-right-large{
+text-align: left;
+}
+
+.slogan-right-small{
+  color: rgb(165, 162, 162);
+  text-align: left;
+}
+
+/* 第五塊 */
+.staff{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.staff-text{
+  margin: auto;
+  color: green;
+  font-size: 50px;
+}
+
+.staff-pic-row{
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  text-align: center;
+}
+
+.row-item a:hover{
+  transition: 0.3s;
+  opacity: 0.5;
+  background-image: url('/background.png');
+}
+
+.row-item{
+  width: 33.3%;
+  padding: 25px 0px;
+}
+
+.row-item img{
+  width: 90%;
+}
+
+.staff p{
+font-weight: bold;
+}
+
+.staff-price{
+  font-size: 25px;
+}
+
+.staff-pic-row span{
+  width: 40px;
+  height: 25px;
+  background-color: green;
+  border-radius: 50% 0% 50% 0%;
+  font-size: 4px;
+  font-weight: bold;
+  color: white;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-item2,.row-item3,.row-item5,.row-item7,.row-item8{
+  position: relative;
+}
+
+.row-item2 span,.row-item3 span,.row-item7 span,.row-item8 span{
+  position: absolute;
+  right: 43px;
+  top:10;
+}
+
+.row-item5 span{
+  position: absolute;
+  border-radius: 0% 0% 0% 0%;
+  width: 70px;
+  height: 15px;
+  line-height: 10px;
+  font-size: 0.5px;
+  right: 43px;
+  left: 43px;
+  bottom:480px;
+}
+
+/* 第六塊 */
+.video{
+  margin: 50px 0px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  background-image: url('./sunimg/asset\ 43.png');
+}
+.video-left{
+  width: 50% ;
+  margin: 200px 40px 200px 150px;
+}
+
+.video-right{
+  width: 50%;
+  position: relative;
+}
+
+.video-background{
+  position: absolute;
+  width: 500px;
+  height: 315;
+  top: 150px;
+  right: 100px;
+}
+
+.video-right i{
+  position: absolute;
+  color: #fff;
+  font-size: 90px;
+  top: 260px;
+  right: 300px;
+}
+
+.video-left-title{
+color: green;
+font-weight: bold;
+font-size: 30px;
+}
+
+.video-left-para{
+font-size: 15px;
+}
+
+.video-left a{
+text-decoration: none;
+color: black;
+display: block;
+border: black solid 1px;
+width: 150px;
+height: 30px;
+font-size: 20px;
+padding: 15px 0px 5px 35px;
+position: relative;
+}
+
+.video-left a:hover{
+position: absolute;
+animation: slide_down .3s;
+background-color:green;
+color: white;
+}
+
+@keyframes slide_down{
+      0% {
+        background-color:#000;
+        color: white;
+        height: 0%;
+      }
+      100% {
+        background-color:green;
+        color: white;
+        height: 30px;
+      }
+}
+
+
+/* 第七塊 */
+.instagram{
+  width: 100%;
+  display: flex;;
+  flex-direction: column;
+}
+
+.instagram-icon{
+  font-weight: bold;
+  margin: auto;
+}
+
+.instagram-icon i{
+  font-size: 60px;
+  padding: 10px 0px 0px 100px;
+}
+
+.instagram-icon p{
+  font-size: 30px;
+}
+
+.instagram-pics{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.instagram-pics a:hover{
+  transition: 1s;
+  filter: brightness(40%);
+}
+
+.instagram-pic{
+  margin: 20px 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.instagram-pic img{
+  width: 90%;
+}
+
+/* 第八塊 */
+.foot{
+width: 100%;
+height: 300px;
+background-color: #F4F4F4;
+box-sizing: border-box;
+letter-spacing: 2px;
+position: relative;
+}
+
+.foot-logo img{
+  width: 150px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 45%;
+  top: 30px;
+}
+
+.foot-info{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  padding: 10px 0px 5px; 
+  left: 36%;
+  top: 100px;
+}
+
+.foot-info a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 5px;
+}
+
+.foot-line{
+  width: 20px;
+  height: 1px;
+  background-color: #AAA9A9;
+  text-align: center;
+  margin: 11px 3px;
+}
+
+.foot-icons{
+  padding: 150px 10px 10px 620px;
+  display: flex;
+}
+
+.foot-icon{
+  background-color: #000;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 12px 7px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.foot-icons a{
+  text-decoration: none;
+  color: #000;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+
+.foot-icon i{
+  color: #fff;
+  display: inline-block;
+  font-size: 5px;
+}
+
+.foot-copyright{
+  position: absolute;
+  left: 40%;
+  top: 230px;
+  color: #AAA9B0;
+  font-size: 5px;
+}
