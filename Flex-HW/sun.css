@@ -137,7 +137,7 @@ font-size: 20px;
   margin: auto;
 }
 
-.benefits-paragraph1{
+.benefits h2{
   color: green;
   text-align: center;
   font-size: 30px;
@@ -400,7 +400,11 @@ position: relative;
   position: absolute;
   padding: 10px 0px 5px; 
   left: 36%;
-  top: 100px;
+  top: 80px;
+}
+
+.foot-info h3{
+  display: inline-block;
 }
 
 .foot-info a{
@@ -414,8 +418,7 @@ position: relative;
   width: 20px;
   height: 1px;
   background-color: #AAA9A9;
-  text-align: center;
-  margin: 11px 3px;
+  margin: 11px 6px;
 }
 
 .foot-icons{
