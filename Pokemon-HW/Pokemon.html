@@ -4,26 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Pokemon</title>
+  <style>
+    body{
+      background: linear-gradient(115deg,rgb(243, 103, 93) 50%, rgb(73, 153, 199) 50%);
+    }
+    h1{
+      text-align: center;
+    }
+    .button{
+      display: flex;
+      justify-content: center;
+    }
+    button{
+      padding: 10px;
+      margin: 10px;
+      border: none;
+      border-radius: 24px;
+      background-color: #fff;
+    }
+  </style>
 </head>
 
 <body>
   <h1>寶可夢圖鑑</h1>
-
+  <div class="button">
   <button onclick='fetchPokemon()'>載入寶可夢圖鑑列表</button>
+  <button onclick="fetchPokemonAppend()">載入寶可夢圖鑑列表appendChild</button>
   <button onclick="reset()">RESET</button>
-
+  </div>
   <div id="container"></div>
 
   <script>
     var container = document.getElementById('container');
-    window.onload = appendPokemon();
-
-    function appendPokemon() {
-      let img = document.createElement('img');
-      img.setAttribute('src', 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/001.png');
-      container.appendChild(img);
-    }
 
     function fetchPokemon() {
       let fileName = "001";
@@ -35,9 +48,17 @@
         pathFile = `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`;
         pokemonImg = `<img src='${pathFile}'>`;
         pokemons += pokemonImg;
-        container.appendChild(pokemons);
       }
-      // container.innerHTML = pokemons;
+      container.innerHTML = pokemons;
+    }
+
+    function fetchPokemonAppend() {
+      for (let i = 1; i < 890; i++) {
+        let img = document.createElement('img');
+        fileName = i.toString().padStart(3, '0');
+        img.setAttribute('src', `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${fileName}.png`);
+        container.appendChild(img);
+      }
     }
 
     function reset() {
