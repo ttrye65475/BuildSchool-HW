@@ -1,0 +1,79 @@
+  @import "gridmd";
+
+  @media screen and(min-width:768px) {
+    .header .container {
+      flex-wrap: wrap;
+
+      nav {
+        display: flex;
+      }
+      .menu-btn{
+        display: none;
+      }
+
+      .navigation {
+        transform: translateX(0);
+        background-color: transparent;
+        width: 80%;
+        height: 50px;
+        position: static;
+        display: block;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        margin: auto;
+        transition: .3s;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+          width: 100%;
+          padding: 0px 0px;
+          padding-left: 0px;
+        }
+      }
+
+      .logo{
+        margin: auto;
+      }
+
+      .phone-icon {
+        position: absolute;
+        top: 20px;
+        right: 15px;
+      }
+
+    }
+
+    .reasons .container {
+      .reason {
+        display: flex;
+        align-items: center;
+        text-align: left;
+      }
+
+      .reason-icon {
+        margin-top: -60px;
+        text-align: center;
+      }
+    }
+
+    .email {
+      .container {
+        h3 {
+          margin-top: 0;
+          margin-bottom: 30px;
+          font-size: 17px;
+        }
+      }
+    }
+
+    .footer .container {
+      .footer-navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  }
