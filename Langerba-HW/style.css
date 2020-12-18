@@ -713,11 +713,11 @@ template {
   color: #66B8E0;
 }
 
-.email .container input .input-email {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
+.email .container #input-email {
+  border-radius: 20px;
+  padding: 10px 20px;
+  padding-right: 50px;
+  outline: none;
 }
 
 .email .container #input-email::-webkit-input-placeholder {

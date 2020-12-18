@@ -7,7 +7,8 @@
       nav {
         display: flex;
       }
-      .menu-btn{
+
+      .menu-btn {
         display: none;
       }
 
@@ -34,7 +35,7 @@
         }
       }
 
-      .logo{
+      .logo {
         margin: auto;
       }
 
@@ -59,13 +60,11 @@
       }
     }
 
-    .email {
-      .container {
-        h3 {
-          margin-top: 0;
-          margin-bottom: 30px;
-          font-size: 17px;
-        }
+    .email .container {
+      h3 {
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 17px;
       }
     }
 
