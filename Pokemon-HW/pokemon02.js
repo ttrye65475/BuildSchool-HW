@@ -17,7 +17,7 @@ let loadAllIndex = 0;
 window.onload = function () {
   let img = document.querySelector(".pic");
   img.setAttribute("style", "transform: rotate(360deg);")
-  // getPokemonJson();
+  getPokemonJson();
 };
 
 function getPokemonJson() {
@@ -39,7 +39,6 @@ function getPokemonJson() {
       }
       pokemonNewArray.push(temp);
     });
-    pokeTemplate();
   }
   xhl.open("GET", "https://raw.githubusercontent.com/apprunner/pokemon.json/master/pokedex.json");
   xhl.send();
@@ -51,10 +50,7 @@ function pokeTemplate(itemIndex) {
   let card = document.getElementById("pokemonTemplate");
   //把getPokemonJson資料加到card
   pokemonNewArray.forEach((item, index) => {
-    if (itemIndex < index) {
-      return;
-    }
-    if (loadAllIndex > 1) {
+    if (itemIndex < index || loadAllIndex > 1) {
       return;
     }
     cloneContent = card.content.cloneNode(true);
@@ -103,7 +99,7 @@ let genUl = function (item) {
 //Load all images button
 let LoadAll = function () {
   loadAllIndex++;
-  getPokemonJson();
+  pokeTemplate();
 }
 
 //Add one image button
@@ -116,6 +112,7 @@ let AddOne = function () {
 //Minus one image button
 let MinusOne = function () {
   if (itemIndex < 0) {
+    itemIndex = -1;
     return;
   }
   itemIndex--;
@@ -142,11 +139,13 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.querySelector(".banner").setAttribute("style", "background-color: rgb(30, 134, 255);border: 1px solid rgb(30, 110, 255);");
+    document.querySelector(".banner").setAttribute("style", "background-color: rgb(30, 134, 255);box-shadow: 0 5px 8px #666; transition: .2s;");
     document.querySelector(".banner h1").setAttribute("style", "color: #fff;");
+    document.querySelector(".button").setAttribute("style", "background-color: #fff; transition: .2s;");
 
   } else {
     document.querySelector(".banner").setAttribute("style", "background-color: #fff; ");
     document.querySelector(".banner h1").setAttribute("style", "color: #000;");
+    document.querySelector(".button").setAttribute("style", "background-color: #fff;");
   }
 }
