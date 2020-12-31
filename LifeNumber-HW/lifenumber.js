@@ -10,7 +10,15 @@ let day;
 let starSign = "";
 let starSignEng = "";
 let starData;
-let a;
+
+// function ShowPic() {
+//   let img = document.createElement("img");
+//   // let img = document.getElementById("img-bomb");
+//   img.setAttribute("src", "./1ABB4932-F09B-4FB5-94D6-CB374D9151EF.gif");
+//   img.setAttribute("style", "width:100%; opacity:0.6; transition: 1s .2s;");
+//   let wrap = document.getElementsByTagName("body")[0];
+//   wrap.append(img);
+// }
 
 button.addEventListener('click', function () {
   dateControl = document.querySelector("#date");
@@ -18,17 +26,17 @@ button.addEventListener('click', function () {
   CountNum();
   CountStar();
   GetSentence();
+  // ShowPic();
 })
 
 //顯示lifeNum()
 function showInfo(lifesen) {
-  let lifeSign = document.querySelector(".starSign");
-  lifeSign.innerHTML = `你的星座是: ${
-    starSign} ${starSignEng}`;
-  let lifeNum = document.querySelector(".lifeNum");
-  lifeNum.innerText = `你的生命靈數是: ${add}`;
-  let sentence = document.querySelector(".sentence");
-  sentence.innerText = `生命靈數小語: ${lifesen}`;
+  let lifeSign = document.querySelector(".starSign-answer");
+  lifeSign.innerHTML = `${starSign}座 ${starSignEng}`;
+  let lifeNum = document.querySelector(".lifeNum-answer");
+  lifeNum.innerText = `${add}`;
+  let sentence = document.querySelector(".sentence-answer");
+  sentence.innerText = `${lifesen}`;
 }
 
 //算生命靈數
