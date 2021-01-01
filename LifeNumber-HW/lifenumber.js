@@ -40,6 +40,7 @@ function CountNum() {
   }
 }
 
+//算星座跟轉換
 function CountStar() {
   month = num[4] + num[5];
   day = num[6] + num[7];
