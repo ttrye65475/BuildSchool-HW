@@ -11,14 +11,6 @@ let starSign = "";
 let starSignEng = "";
 let starData;
 
-// function ShowPic() {
-//   let img = document.createElement("img");
-//   // let img = document.getElementById("img-bomb");
-//   img.setAttribute("src", "./1ABB4932-F09B-4FB5-94D6-CB374D9151EF.gif");
-//   img.setAttribute("style", "width:100%; opacity:0.6; transition: 1s .2s;");
-//   let wrap = document.getElementsByTagName("body")[0];
-//   wrap.append(img);
-// }
 
 button.addEventListener('click', function () {
   dateControl = document.querySelector("#date");
@@ -26,7 +18,6 @@ button.addEventListener('click', function () {
   CountNum();
   CountStar();
   GetSentence();
-  // ShowPic();
 })
 
 //顯示lifeNum()

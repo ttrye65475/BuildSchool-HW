@@ -22,20 +22,23 @@
 
     .input-group {
       width: 30%;
-      margin-left: auto;
-      margin-right: 80px;
       display: flex;
       flex-direction: column;
       margin: auto;
       margin-top: 50px;
+      padding: 15px 20px;
       color: #f6ecf0 !important;
       font-size: 25px;
+      border-radius: 24px;
+      transition: .5s;
     }
 
-    /* .input-group:hover{
-      border: 1px solid #fff;
-      transform: translateY(-100deg);
-    } */
+    .input-group:hover {
+      border: 0px;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+      transform: translate(0px, -15px);
+      transition: .5s;
+    }
 
     .date {
       display: flex;
@@ -152,12 +155,8 @@
   </script>
 
   <script src="particles.js"></script>
-  <script>
-    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles-js', './particlesjs-config.json', function () {
-      console.log('callback - particles.js config loaded');
-    });
-  </script>
+  <script src="app.js"></script>
+
 
   <script src="./lifenumber.js"></script>
 </body>
