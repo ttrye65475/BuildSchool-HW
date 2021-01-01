@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800&display=swap"
+      rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .desk {
+      background-color: rgb(89, 40, 220);
+      width: 22.33%;
+      height: 415px;
+      margin: auto;
+      font-family: 'Montserrat', sans-serif;
+      border-radius: 24px;
+      padding: 0px 5px 60px;
+      position: relative;
+    }
+    .desk::before{
+      content: "BEST";
+      text-align: center;
+      line-height: 25px;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-block;
+      position: absolute;
+      top: 25px;
+      right: -28px;
+      width: 80px;
+      height: 0px;
+      color: #fff;
+      border-top: 0px solid rgb(26,129,253);
+      border-bottom: 25px solid rgb(26,129,253);
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      transform: rotate(45deg);
+    }
+    .desk-price{
+      color: #fff;
+      font-weight: 300;
+      text-align: center;
+    }
+    .desk-price i{
+      font-size: 75px;
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+    h3{
+      font-size: 18px;
+      padding: 10px 0;
+      font-weight: 400;
+      letter-spacing: 3px;
+    }
+    span{
+      font-size: 48px;
+      font-weight: 500;
+    }
+    p{
+      font-size: 14px;
+      padding: 0px 10px;
+      line-height: 1.875;
+    }
+    button{
+      font-size: 12px;
+      font-weight: 500;
+      padding: 13px 43px 11px;
+      margin: 25px;
+      border: none;
+      border: 1px solid #fff;
+      border-radius: 24px;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      background-color: transparent;
+      font-weight: 400;
+      outline: none;
+    }
+    button:hover{
+      background-color: #fff;
+      color: rgb(89, 40, 220);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="desk">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="desk-price">
+            <i class="fas fa-tablet-alt"></i>
+            <h3>DEDICATED DESK</h3>
+            <p>$<span>60</span>/monthly</p>
+            <p>Choosing this plan you will be provided with your personal desk.</p>
+            <button>READ MORE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

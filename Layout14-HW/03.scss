@@ -1,0 +1,154 @@
+@import "_normalize";
+@import "_grid";
+@import "_gridmd";
+@import "_gridlg";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.infopros {
+  width: 100%;
+  // background-image: url('03.png');
+  // background-repeat: no-repeat;
+  // background-position: center;
+  color: #fff;
+  font-family: 'Montserrat',
+    sans-serif;
+}
+
+.info {
+  background-image: url('03-2.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .item {
+    padding: 5px 15px;
+    padding-bottom: 39px;
+  }
+
+
+  h3 {
+    font-size: 12px;
+    padding-bottom: 27px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  span {
+    color: rgb(48, 235, 255);
+  }
+
+  p {
+    font-size: 14px;
+    padding-bottom: 14px;
+    font-weight: 300;
+    line-height: 1.875;
+  }
+}
+
+.pros {
+  text-align: center;
+
+  .place {
+    background-color: #3490FF;
+  }
+
+  .project {
+    background-color: #167AF2;
+  }
+
+  .seccessful {
+    background-color: #117AF8;
+  }
+
+  .place,
+  .project,
+  .seccessful {
+    padding: 44px 35px 61px 41px;
+  }
+
+  .place:hover,
+  .project:hover,
+  .seccessful:hover {
+    filter: brightness(90%);
+  }
+
+  i {
+    font-size: 50px;
+  }
+
+  i:hover {
+    color: green;
+  }
+
+  h3 {
+    font-size: 18px;
+    padding: 25px 0 16px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.875;
+  }
+
+}
+
+@media screen and (max-width:767px) {
+  .info {
+    padding: 55px 0 28px;
+  }
+}
+
+@media screen and (min-width:768px) {
+
+  .info .item,
+  .pros {
+    max-width: 1200px;
+  }
+
+  .info {
+    display: flex;
+    padding: 50px 0 140px;
+  }
+
+  .pros {
+    display: flex;
+  }
+
+  .seccessful p {
+    padding-bottom: 25.6px;
+  }
+}
+
+.pros {
+  position: relative;
+  top: -140px;
+  margin: auto;
+}
+
+@media screen and (min-width:1200px) {
+  .info {
+    padding: 112px 0 180px;
+    position: relative;
+  }
+
+  .seccessful p {
+    padding-bottom: 0px;
+  }
+
+  .pros {
+    top: -100px;
+  }
+}

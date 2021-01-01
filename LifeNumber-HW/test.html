@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #particles-js{
+      background-color: rgb(231, 165, 165);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="particles-js"></div>
+
+  <script src="particles.js"></script>
+  <script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load("particles-js", './particlesjs-config.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
+
+</body>
+
+</html>

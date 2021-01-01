@@ -1,0 +1,129 @@
+@import "_normalize";
+@import "grid";
+@import "_gridmd";
+@import "gridlg";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact {
+  background-color: #2B3238;
+  font-family: 'Montserrat',
+    sans-serif;
+  line-height: 1.857;
+}
+
+.contact .container {
+  margin: auto;
+  color: #fff;
+  padding: 30px 10px;
+
+  .detail,
+  .message {
+    padding-top: 20px;
+  }
+
+  h3 {
+    color: #1A77CA;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+  h3,
+  p {
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 27px;
+  }
+
+  a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 300;
+    display: inline-block;
+    padding-left: 26px;
+  }
+
+  .email a {
+    padding-left: 20px;
+  }
+
+  .email a:hover,
+  .phone a:hover {
+    color: #25EBFF;
+  }
+
+  .address,
+  .email,
+  .phone {
+    margin: 7.5px auto;
+    display: flex;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  input,
+  textarea {
+    display: block;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 19px;
+    padding-bottom: 14px;
+    outline: none;
+    color: #fff;
+  }
+
+  ::placeholder {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  i {
+    color: #25EBFF;
+    font-size: 25px;
+    display: inline-block;
+  }
+
+  button {
+    border: none;
+    background-color: #1A81FD;
+    border-radius: 24px;
+    color: #fff;
+    padding: 14px 34px 12px;
+    margin-top: 20px;
+    font-weight: 800;
+  }
+
+  button:hover {
+    background-color: #25EBFF;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) {
+  .contact .container{
+    max-width: 1200px;
+  }
+  .contact .row{
+    display: flex;
+  }
+  .detail, .message{
+    padding: 5px 15px;
+  }
+}

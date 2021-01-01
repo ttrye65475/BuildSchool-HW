@@ -1,0 +1,129 @@
+@import "_normalize";
+@import "grid";
+@import "gridmd";
+@import "gridlg";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  padding: 0 15px;
+  font-family: 'Montserrat',
+    sans-serif;
+  text-align: center;
+}
+
+.pic img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.txt {
+  margin-top: 35px;
+
+  h5 {
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+  }
+
+  .seperator {
+    padding: 20px 0;
+
+    span {
+      display: inline-block;
+      width: 70px;
+      height: 2px;
+      background-color: rgb(122, 82, 253);
+    }
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: Lato,
+      sans-serif;
+    line-height: 1.667;
+  }
+
+  .btn {
+    padding-top: 35px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2em;
+
+    a {
+      display: inline-block;
+      padding: 15px 33px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  }
+
+  .btn-contact {
+    border: 1px solid rgb(122, 82, 253);
+    color: #000;
+  }
+
+  .btn-contact:hover {
+    background-color: rgb(122, 82, 253);
+    color: #fff;
+  }
+
+  .btn-project {
+    border: 1px solid rgb(122, 82, 253);
+    background-color: rgb(122, 82, 253);
+    color: #fff;
+    margin: 20px 0 0;
+  }
+
+  .btn-project:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .pic {
+    padding: 0 10px;
+  }
+
+  .pic img {
+    max-width: 120%;
+    left: -50px;
+    top: 50px;
+  }
+
+  .txt {
+    text-align: left;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width:1200px) {
+
+  .pic img {
+    max-width: 150%;
+    left: -120px;
+    top: 0px;
+  }
+
+  .txt {
+    .btn-project {
+      margin: 20px 40px 0px;
+    }
+  }
+}

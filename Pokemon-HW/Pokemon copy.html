@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Pokemon!</title>
+</head>
+
+<body>
+
+  <h1>寶可夢圖鑑</h1>
+
+  <div class="button">
+    <button onclick='fetchPokemon()'>載入寶可夢圖鑑列表</button>
+    <button onclick="PokemonAppend()">加一張圖</button>
+    <button onclick="reset()">RESET</button>
+  </div>
+
+  <div class="container">
+    <div class="row"></div>
+  </div>
+
+  <template id="pokemonTemplate">
+    <div class="card" style="width: 18rem;">
+      <img class="img card-img-top" src="" alt="">
+      <div class="card-body">
+        <h5 class="id card-title"></h5>
+        <p class="name card-text"></p>
+        <button class="btn btn-primary ">詳細資料</button>
+      </div>
+    </div>
+  </template>
+
+  <!-- Modal -->
+  <div class="modal fade" id="pokemonModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img src="" alt="">
+          <p id="Id"></p>
+          <p id="Hp"></p>
+          <p id="Attack"></p>
+          <p id="Defense"></p>
+          <p id="SpAttack"></p>
+          <p id="SpDefense"></p>
+          <p id="Speed"></p>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-primary">關閉</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+  </script>
+  <script src="./pokemon-copy.js">
+  </script>
+
+</body>
+
+</html>
