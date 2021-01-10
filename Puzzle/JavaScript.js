@@ -89,6 +89,7 @@ function cutDraw() {
 
 //跑亂拼圖
 let chk;
+
 function randomPuzzle() {
   randomArray = [];
   for (let i = 0; i < 10; i++) {
@@ -102,6 +103,7 @@ function randomPuzzle() {
 }
 
 let determ;
+
 function rule(x, y, puzzleNum) {
 
   for (let i = 1; i < puzzleNum; i++) {
