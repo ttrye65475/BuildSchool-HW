@@ -213,7 +213,6 @@ function edit(targetId) {
 //移除lst內的東西 
 function removeData(target) {
   let spanRemoveID = target.parentNode.id;
-  console.log(target.parentNode.id)
   let removeSpan = _tempArray.findIndex(x => x.CreateTime == spanRemoveID);
   _tempArray.splice(removeSpan, 1);
   localStorage.setItem('calenderDay', JSON.stringify(_tempArray));
