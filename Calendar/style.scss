@@ -1,0 +1,185 @@
+@import "_normalize";
+@import "grid";
+@import "gridmd";
+@import "gridlg";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&display=swap');
+
+
+#calender {
+  display: grid;
+  font-family: 'Montserrat',
+    sans-serif;
+}
+
+#title {
+  padding: 30px 50px;
+  display: grid;
+  grid-template-columns: 3.5fr 1.5fr 1fr 3fr;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+#title i {
+  font-size: 50px;
+}
+
+#title i:hover {
+  color: rgb(235, 112, 75);
+  transform: scale(1.05);
+  transition: .3s;
+  text-shadow: #fff;
+}
+
+#title>:last-child {
+  text-align: right;
+}
+
+#title p {
+  color: rgba(255, 255, 255, 0.925);
+  text-shadow: 2px 2px 15px rgb(223, 136, 79);
+}
+
+#title>:first-child:hover,
+#title>:last-child:hover {
+  cursor: pointer;
+}
+
+#weekday {
+  padding: 40px;
+  color: #26124b;
+}
+
+#week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  list-style: none;
+  margin: 0;
+  background-color: rgba(236, 179, 179, 0.6);
+}
+
+#day {
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 120px;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 3px solid rgba(236, 179, 179, 0.6);
+    ;
+    padding: 5px;
+    position: relative;
+    overflow: auto;
+  }
+
+  li::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .addSpanGroup {
+    content: 'Add Schedule';
+    position: absolute;
+    background-color: rgba(0, 50, 230, .3);
+    top: 5%;
+    right: -1px;
+    font-size: 1px;
+    padding: 2px;
+    display: none;
+  }
+
+  .liGroup:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 5px 5px rgba(236, 179, 179, 0.8);
+    transition: .3s;
+    cursor: pointer !important;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  li:hover .addSpanGroup {
+    display: initial;
+    color: rgb(14, 14, 41);
+    transition: .3s;
+    z-index: -1;
+  }
+
+  p {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    display: inline-block;
+  }
+
+  li>div>.spanGroup {
+    background-color: rgb(253, 128, 11);
+    display: block;
+    margin-top: 3px;
+    color: #fff;
+    padding: 2px 5px;
+    position: relative;
+    z-index: 2 !important;
+  }
+
+  li>div>.spanGroup>.SRGroup {
+    position: absolute;
+    width: 15px;
+    height: 28px;
+    background-color: rgba(38, 38, 121, 0.5);
+    top: 0;
+    right: 0px;
+    padding: 2px 5px;
+    font-size: 1px;
+    line-height: 20px;
+  }
+}
+
+#modal-content {
+  .modal-header {
+    background-color: rgba(252, 94, 82, 0.8);
+
+    i {
+      padding-right: 15px;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    h5 {
+      font-size: 35px;
+      color: #ffffff;
+    }
+  }
+
+  #saveBtn {
+    background-color: rgba(241, 131, 217, 0.63);
+    border: none;
+  }
+}
+
+#modal-content_span {
+  .modal-header {
+    background-color: rgba(245, 121, 38, 0.8);
+
+    i {
+      padding-right: 15px;
+      color: #fff;
+      font-size: 30px;
+    }
+
+    h5 {
+      font-size: 35px;
+      color: #ffffff;
+    }
+  }
+
+  #saveEditedBtn {
+    background-color: rgba(233, 162, 30, 0.8);
+    border: none;
+  }
+}
