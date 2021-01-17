@@ -1,0 +1,129 @@
+@import "_normalize";
+@import "grid";
+@import "gridmd";
+@import "gridlg";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@1,600&display=swap');
+
+.main {
+  display: flex;
+}
+
+.menu {
+  width: 30%;
+  padding: 10px 0px 10px 10px;
+  box-sizing: border-box;
+
+  .search {
+    margin-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #search-bar {
+    outline: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background: rgb(252, 252, 252);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    font-size: 50px;
+    box-shadow: 0 0 5px grey;
+    background: rgb(91, 187, 224);
+    border-radius: 10px;
+  }
+
+  .attractions {
+    justify-content: center;
+    max-height: 750px;
+    overflow: auto;
+
+    div {
+      margin: 10px 0;
+      background-color: rgb(8, 98, 201);
+      padding: 15px;
+      color: #fff;
+    }
+
+    h5 {
+      font-size: 25px;
+      margin: 10px 0;
+    }
+
+    p {
+      line-height: 2;
+    }
+
+    .btnGroup {
+      border: none;
+      background-color: #e5ba22;
+      padding: 10px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btnGroup:hover {
+      box-shadow: 5px 5px 5px rgba(221, 190, 88, 0.3);
+    }
+
+    span {
+      display: inline-block;
+      padding: 10px;
+    }
+
+    .addGroup,
+    .telGroup,
+    .ticketGroup {
+      margin: 5px;
+      background-color: #10a44a;
+    }
+
+    .remarksGroup {
+      display: block;
+      letter-spacing: .1em;
+    }
+  }
+}
+
+.map {
+  width: 70%;
+  position: relative;
+}
+
+#mapid {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+.dropdown {
+  display: block;
+  z-index: 80;
+  position: absolute;
+  width: 30%;
+  height: 10%;
+  background-color: #fff;
+  top: 10px;
+  right: 10px;
+  border: 5px solid rgb(53, 106, 167);
+  border-radius: 24px;
+
+  h5 {
+    font-size: 2em;
+    letter-spacing: 3px;
+    margin: 25px;
+  }
+
+  #cities {
+    font-size: 25px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 30%;
+  }
+
+}
