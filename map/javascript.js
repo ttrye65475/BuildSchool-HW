@@ -149,6 +149,9 @@ function setInfo(info) {
     spanTicket.setAttribute("class", "ticketGroup");
     spanRemarks.setAttribute("class", "remarksGroup");
 
+    if (info[i].TicketInfo == ""){
+      info[i].TicketInfo = "無";
+    }
     h5.innerText = info[i].Name;
     btn.innerText = `想去這玩`;
     p.innerText = info[i].Description;
