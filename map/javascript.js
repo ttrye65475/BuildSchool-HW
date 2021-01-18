@@ -10,12 +10,20 @@ var redIcon = new L.Icon({
 });
 
 window.onload = function () {
-  fetchResource();
+  let promise = new Promise(function(resolve,reject){
+    resolve();
+  })
+
+  promise.then(result=>{
+    fetchResource();
+    let load = document.getElementById("load");
+    load.innerHTML = "";
+  })
 }
 
 //取得json資料
 function fetchResource() {
-  let url = "./Attractions.json";
+  let url = "https://bsopendata.azurewebsites.net/api/LeisureTravel/Attractions";
   fetch(url)
     .then(response => response.json())
     .then(result => {

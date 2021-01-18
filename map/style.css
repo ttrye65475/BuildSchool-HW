@@ -610,4 +610,12 @@ template {
   right: 5%;
   width: 30%;
 }
+
+.load {
+  background-color: rgba(252, 252, 252, 0.699);
+}
+
+.load img {
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */
