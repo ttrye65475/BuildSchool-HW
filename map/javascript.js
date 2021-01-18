@@ -88,7 +88,7 @@ function getMap() {
 function setDropDown() {
   //產生下拉式選單資料, 為每一個資料做onclick方法
   let cities = document.getElementById("cities");
-  _citiesSort = ["臺北市", "基隆市", "新北市", "宜蘭縣", "桃園市", "新竹市", "新竹縣", "苗栗縣", "台中市", "彰化縣", "南投縣", "嘉義市", "嘉義縣", "雲林縣", "臺南市", "高雄市", "澎湖縣", "金門縣", "屏東縣", "臺東縣", "花蓮縣", "連江縣"]
+  _citiesSort = ["臺北市", "基隆市", "新北市", "宜蘭縣", "桃園市", "新竹市", "新竹縣", "苗栗縣", "臺中市", "彰化縣", "南投縣", "嘉義市", "嘉義縣", "雲林縣", "臺南市", "高雄市", "澎湖縣", "金門縣", "屏東縣", "臺東縣", "花蓮縣", "連江縣"]
   for (let i = 0; i < _citiesSort.length; i++) {
     let option = document.createElement("option");
     option.setAttribute("class", "optionGroup");
