@@ -7,20 +7,31 @@
 
 .main {
   display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .menu {
-  width: 30%;
-  padding: 10px 0px 10px 10px;
+  // width: 30%;
+  // padding: 10px 0px 10px 10px;
   box-sizing: border-box;
 
   .search {
-    margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
+
+    h5 {
+      font-size: 30px;
+      margin: 20px 0;
+      color: #338bff;
+      text-shadow: 5px 5px 10px rgba(99, 191, 233, 0.6);
+    }
   }
 
   #search-bar {
+    margin: 10px 0;
     outline: none;
   }
 
@@ -30,7 +41,6 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    font-size: 50px;
     box-shadow: 0 0 5px grey;
     background: rgb(91, 187, 224);
     border-radius: 10px;
@@ -38,7 +48,7 @@
 
   .attractions {
     justify-content: center;
-    max-height: 750px;
+    height: 200px;
     overflow: auto;
 
     div {
@@ -90,8 +100,8 @@
 }
 
 .map {
-  width: 70%;
   position: relative;
+  margin-top: 10px;
 }
 
 #mapid {
@@ -101,37 +111,84 @@
 }
 
 .dropdown {
-  display: block;
-  z-index: 80;
+  z-index: 1;
   position: absolute;
-  width: 30%;
-  height: 10%;
+  width: 150px;
+  height: 100px;
   background-color: #fff;
   top: 10px;
   right: 10px;
   border: 5px solid rgb(53, 106, 167);
   border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h5 {
-    font-size: 2em;
-    letter-spacing: 3px;
-    margin: 25px;
+    font-size: 15px;
+    letter-spacing: .5em;
+    margin: 20px 0 15px 15px;
   }
 
   #cities {
-    font-size: 25px;
-    position: absolute;
-    top: 30%;
-    right: 5%;
-    width: 30%;
+    font-size: 20px;
+    width: 100px;
   }
 
 }
 
 .load {
-  background-color: rgba(252, 252, 252, 0.699);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
 
   img {
     width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width:768px) {
+  .dropdown {
+    width: 320px;
+    flex-direction: row;
+
+    h5 {
+      font-size: 25px;
+      letter-spacing: .3em;
+    }
+
+    #cities {
+      font-size: 25px;
+    }
+
+
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .main {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .menu {
+    .attractions {
+      height: 100vh;
+    }
+  }
+
+  .map {
+    margin-top: 0px;
   }
 }
