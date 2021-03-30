@@ -569,7 +569,7 @@ template {
 
 .menu .attractions span {
   display: inline-block;
-  padding: 10px;
+  padding: 8px;
 }
 
 .menu .attractions .addGroup,
@@ -676,7 +676,7 @@ template {
     margin: 0;
   }
   .menu .attractions {
-    height: 100vh;
+    height: 80vh;
   }
   .map {
     margin-top: 0px;

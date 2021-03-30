@@ -27,11 +27,17 @@ nav {
     }
 
     span:hover {
+      //cursor:pointer;
       text-shadow: 5px 0px 5px rgb(248, 208, 208);
       box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
       background-color: rgba(53, 163, 180, 0.8);
       transition: .3s ease-out;
     }
+
+    span>:nth-child(2):hover,span:nth-child(2):hover,span:nth-child(3):hover {
+      cursor:pointer;
+    }
+
   }
 }
 

@@ -517,6 +517,10 @@ nav .link span:hover {
   transition: .3s ease-out;
 }
 
+nav .link span > :nth-child(2):hover, nav .link span:nth-child(2):hover, nav .link span:nth-child(3):hover {
+  cursor: pointer;
+}
+
 #puzzle {
   margin: auto;
   background-color: #aaa;

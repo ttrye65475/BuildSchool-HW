@@ -13,11 +13,8 @@ window.onload = function () {
   let promise = new Promise(function(resolve,reject){
     resolve();
   })
-
   promise.then(result=>{
     fetchResource();
-    let load = document.getElementById("load");
-    load.innerHTML = "";
   })
 }
 
@@ -30,6 +27,8 @@ function fetchResource() {
       objResult = result.XML_Head.Infos.Info;
       setData(objResult);
       getMap();
+      let load = document.getElementById("load");
+      load.innerHTML = "";
     })
     .catch(ex => {
       document.getElementById("attractions").innerText = ex;

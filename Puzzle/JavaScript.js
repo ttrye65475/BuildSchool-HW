@@ -15,10 +15,10 @@ function setInfo() {
     cutDraw();
   })
 
-  // let back = document.querySelector("#back");
-  // back.addEventListener('click', function () {
-  //   stepBack();
-  // })
+  let back = document.querySelector("#back");
+  back.addEventListener('click', function () {
+    stepBack();
+  })
 }
 
 //難度選擇
@@ -30,7 +30,6 @@ function setPuzzleSize() {
   levelInput = document.getElementById("levelInput").value;
   width = 600 + (levelInput * 2);
   let puzzle = document.querySelector("#puzzle");
-  // puzzle.setAttribute("style", "width:606px;");
   puzzle.setAttribute("style", `width:${width}px;`);
 }
 
@@ -41,7 +40,6 @@ let puzzlePic = document.querySelector("#puzzle-pic");
 
 function setCanvas() {
   puzzleNum = parseInt(levelInput);
-  // let puzzlePic = document.querySelector("#puzzle-pic");
   let size = (width - (levelInput * 2)) / puzzleNum;
 
   for (let i = 1; i < puzzleNum * puzzleNum + 1; i++) {
@@ -49,7 +47,7 @@ function setCanvas() {
     can.setAttribute("id", `canvas${i}`);
     can.setAttribute("width", `${size}`);
     can.setAttribute("height", `${size}`);
-    can.setAttribute("style", `order:${i};`);
+    can.setAttribute("style", `order:${i}`);
     can.setAttribute("onclick", `clickImg(this)`);
     puzzlePic.appendChild(can);
   }
@@ -88,18 +86,18 @@ function cutDraw() {
 
 
 //跑亂拼圖
-let chk;
+let chkRandom;
 
 function randomPuzzle() {
   randomArray = [];
-  for (let i = 0; i < 10; i++) {
-    chk = true;
+  for (let i = 0; i < 100; i++) {
+    chkRandom = true;
     let num = Math.floor(Math.random() * (puzzleNum * puzzleNum + 1));
     if (num > 0) {
       clickImg(document.getElementById(`canvas${num}`));
     }
   }
-  chk = false;
+  chkRandom = false;
 }
 
 let determ;
@@ -147,8 +145,8 @@ function clickImg(obj) {
   let change = lastCanvas.style.order;
   rule(Number(selectOrder), Number(change), puzzleNum);
 
-  if (chk) {
-    //點圖片會跟lastCanvas交換order(randomPuzzle)
+  if (chkRandom) {
+    //random圖片時交換order
     if (determ) {
       obj.style.order = change;
       lastCanvas.style.order = selectOrder;
@@ -157,13 +155,20 @@ function clickImg(obj) {
     } else {
       return;
     }
-  } else {
+  } 
+  // else if (chkBack) {
+  //   //點選一鍵返回時做確認
+  //   obj.style.order = change;
+  //   lastCanvas.style.order = selectOrder;
+  //   determ = false;
+  // } 
+  else {
     //點圖片會跟lastCanvas交換order
     if (determ) {
       obj.style.order = change;
       lastCanvas.style.order = selectOrder;
       determ = false;
-      // randomArray.push(change);
+      randomArray.push(change);
       checkPlace();
     } else {
       return;
@@ -172,16 +177,18 @@ function clickImg(obj) {
 
 }
 
+// let chkBack;
 // //一鍵返回
 // const sleep = function (milliseconds) {
 //   return new Promise(resolve => setTimeout(resolve, milliseconds))
 // }
 // async function stepBack() {
-//   chk = true;
-//   randomArray.splice(0, 0, puzzleNum * puzzleNum);
+//   chkBack = true;
 //   let length = randomArray.length;
 //   for (let i = 0; i < length; i++) {
 //     let temp = randomArray.pop();
+//     console.log(temp);
+//     console.log(document.getElementById(`canvas${temp}`));
 //     clickImg(document.getElementById(`canvas${temp}`));
 //     await sleep(50);
 //   }

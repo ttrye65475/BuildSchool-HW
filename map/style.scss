@@ -14,8 +14,6 @@
 }
 
 .menu {
-  // width: 30%;
-  // padding: 10px 0px 10px 10px;
   box-sizing: border-box;
 
   .search {
@@ -82,7 +80,7 @@
 
     span {
       display: inline-block;
-      padding: 10px;
+      padding: 8px;
     }
 
     .addGroup,
@@ -184,7 +182,7 @@
 
   .menu {
     .attractions {
-      height: 100vh;
+      height: 80vh;
     }
   }
 
